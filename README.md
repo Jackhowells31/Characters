@@ -1,2 +1,2 @@
 # Characters
-this is my Dnd characters project.
+this is my DnD characters project.
