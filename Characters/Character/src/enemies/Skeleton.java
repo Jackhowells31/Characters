@@ -6,7 +6,7 @@ public class Skeleton implements EnemyCharacter {
 
 	private int health = 9;
 	private int damage = 12;
-	private String name = "ted";
+	private String name = "Tom";
 
 	public Skeleton(String name) {
 		this.name = name;
