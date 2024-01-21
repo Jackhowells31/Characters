@@ -4,6 +4,7 @@ package characters;
 //import enemies.Rat;
 import enemies.Skeleton;
 import spells.MagicMissile;
+import weapon.Dagger;
 //import spells.Fireball;
 import weapon.Greatsword;
 
@@ -11,13 +12,14 @@ public class TestCharacter {
 
 	public static void main(String[] args) {
 
-		Barbarian jeff = new Barbarian();
-		Wizard tom = new Wizard(null);
+		Barbarian jeff = new Barbarian("Xander");
+		Wizard tom = new Wizard("Will");
+		Rogue dan = new Rogue("Dan");
 		Skeleton frank = new Skeleton("Frank");
 		Skeleton doug = new Skeleton("Doug");
 		jeff.meleeAttack(frank, new Greatsword());
 		tom.castSpell(doug, new MagicMissile());
-		
+		dan.meleeAttack(doug, new Dagger());
 	}
 
 //	public static void main(String[] args) {
