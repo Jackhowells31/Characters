@@ -1,5 +1,6 @@
 package characters;
 
+import Potions.SmallHealthPotion;
 //import enemies.Goul;
 //import enemies.Rat;
 import enemies.Skeleton;
@@ -20,6 +21,9 @@ public class TestCharacter {
 		jeff.meleeAttack(frank, new Greatsword());
 		tom.castSpell(doug, new MagicMissile());
 		dan.meleeAttack(doug, new Dagger());
+		frank.attack2(dan);
+		dan.usePotionSmall(dan, new SmallHealthPotion());
+		
 	}
 
 //	public static void main(String[] args) {
@@ -34,4 +38,4 @@ public class TestCharacter {
 //		System.out.println("This ghouls health is "+ghoul1.getHealth());
 //	}
 
-}
+}		

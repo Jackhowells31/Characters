@@ -85,10 +85,9 @@ public class Wizard implements MagicCharacter {
 	}
 
 
-	@Override
 	public void castSpell(EnemyCharacter target, Spell spell) {
 		target.setHealth(target.getHealth()-spell.getDamage());
-		System.out.println(this.getName() + " casts a spell for " + spell.getDamage()+ " damage on " + target.getName()+".");
+		System.out.println(this.getName() + " casts "+ spell.getName() +" for " + spell.getDamage()+ " damage on " + target.getName()+".");
 		
 	}
 

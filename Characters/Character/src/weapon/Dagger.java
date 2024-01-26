@@ -9,7 +9,10 @@ public class Dagger implements Weapon {
 		
 		return damage;
 	}
-
+	public int setDamage() {
+		
+		return damage;
+	}
 	public String getName() {
 		return name;
 	}

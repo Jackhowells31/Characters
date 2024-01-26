@@ -1,9 +1,8 @@
 package characters;
 
+import Potions.SmallHealthPotion;
 import enemies.EnemyCharacter;
-import enemies.Skeleton;
 import weapon.Dagger;
-import weapon.Greatsword;
 
 public class Rogue implements PlayerCharacter {
 
@@ -64,9 +63,14 @@ public class Rogue implements PlayerCharacter {
 
 	public void meleeAttack(EnemyCharacter target, Dagger Dagger) {
 		target.setHealth(target.getHealth() - this.damage);
-		System.out.println(
-				this.getName() + " stabs back with Dagger for " + this.getDamage() + " to " + target.getName());
+		System.out.println(this.getName() + " stabs " + target.getName() + " in the back with Dagger for "
+				+ this.getDamage() + " damage");
 	}
 
+	public void usePotionSmall(PlayerCharacter target, SmallHealthPotion SmallHealthPotion) {
+		target.setHealth(target.getHealth() + this.damage);
+		System.out.println(this.getName() + " drinks potion restoring " + SmallHealthPotion.getDamage() + " "
+				+ target.getName() + " now has " + target.getHealth() + " health left!");
+	}
 
 }

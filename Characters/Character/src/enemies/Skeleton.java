@@ -6,10 +6,8 @@ public class Skeleton implements EnemyCharacter {
 
 	private int health = 9;
 	private int damage = 12;
-	private String name = "Tom";
 
 	public Skeleton(String name) {
-		this.name = name;
 		this.health = 15;
 		this.damage = 8;
 	}
@@ -35,18 +33,21 @@ public class Skeleton implements EnemyCharacter {
 	}
 
 	public void setName(String name) {
-		this.name = name;
 	}
 
 	public void attack1(PlayerCharacter target) {
 		target.setHealth(target.getHealth() - damage);
 		System.out.println("Skeleton shoots for " + this.damage + " damage to " + target.getName());
-
+		
 	}
 
 	public void attack2(PlayerCharacter target) {
 		target.setHealth(target.getHealth() - damage + 3);
-		System.out.println("Skeleton stabs for " + this.damage + -3 + " damage to " + target.getName());
+		System.out.println("Skeleton stabs for " + this.damage + " damage to " + target.getName() + ". "
+				+ target.getName() + " has " + target.getHealth() + " health left");
+
 	}
+	
+	
 
 }

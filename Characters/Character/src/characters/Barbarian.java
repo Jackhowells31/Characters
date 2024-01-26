@@ -68,7 +68,7 @@ public class Barbarian implements PlayerCharacter {
 	public void meleeAttack(EnemyCharacter target, Greatsword greatsword) {
 		target.setHealth(target.getHealth() - this.damage);
 		System.out.println(
-				this.getName() + " attacks with Greatsword for " + this.getDamage() + " to " + target.getName());
+				this.getName() + " attacks with Greatsword for " + this.getDamage() + " damage to " + target.getName());
 	}
 
 }
