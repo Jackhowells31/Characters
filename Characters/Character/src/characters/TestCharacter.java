@@ -1,29 +1,44 @@
 package characters;
 
 import Potions.SmallHealthPotion;
-//import enemies.Goul;
-//import enemies.Rat;
+import Trinkets.SmallHealthRing;
+import enemies.Goul;
+import enemies.Rat;
 import enemies.Skeleton;
+import spells.Fireball;
 import spells.MagicMissile;
 import weapon.Dagger;
-//import spells.Fireball;
+
 import weapon.Greatsword;
 
 public class TestCharacter {
 
 	public static void main(String[] args) {
 
-		Barbarian jeff = new Barbarian("Xander");
-		Wizard tom = new Wizard("Will");
+//		Barbarian jeff = new Barbarian("Xander");
+//		Wizard tom = new Wizard("Will");
 		Rogue dan = new Rogue("Dan");
 		Skeleton frank = new Skeleton("Frank");
 		Skeleton doug = new Skeleton("Doug");
-		jeff.meleeAttack(frank, new Greatsword());
-		tom.castSpell(doug, new MagicMissile());
-		dan.meleeAttack(doug, new Dagger());
-		frank.attack2(dan);
-		dan.usePotionSmall(dan, new SmallHealthPotion());
 		
+//		jeff.meleeAttack(frank, new Greatsword());
+//		tom.castSpell(doug, new MagicMissile());
+		//can't figure out why it return null for target name
+		
+		dan.equipSmallHealthRing(dan, new SmallHealthRing());
+		
+		dan.meleeAttack(doug, new Dagger());
+		
+		
+		frank.attack2(dan);
+		//can't figure out why they return null
+		
+		System.out.println(dan.getHealth());
+		//testing getHealth
+
+		dan.usePotionSmall(dan, new SmallHealthPotion());
+		// why is it outputting 11
+		//fixed used this.getDamage Not Object.getDamage
 	}
 
 //	public static void main(String[] args) {
@@ -38,4 +53,4 @@ public class TestCharacter {
 //		System.out.println("This ghouls health is "+ghoul1.getHealth());
 //	}
 
-}		
+}

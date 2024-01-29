@@ -5,4 +5,6 @@ public interface PlayerCharacter {
 	int getHealth();
 	void setHealth(int health);
 
+	
+	
 }

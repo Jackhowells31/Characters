@@ -1,8 +1,9 @@
-package Potions;
+package Trinkets;
 
-public interface HealingPotions{
-	
+public interface Jewlery {
+
 	int getHealth();
 	int setHealth();
 	String getName();
+	
 }

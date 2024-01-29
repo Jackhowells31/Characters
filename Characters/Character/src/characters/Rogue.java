@@ -1,14 +1,15 @@
 package characters;
 
 import Potions.SmallHealthPotion;
+import Trinkets.SmallHealthRing;
 import enemies.EnemyCharacter;
 import weapon.Dagger;
 
 public class Rogue implements PlayerCharacter {
 
 	private String name = "Billy";
-	private int health = 7;
-	private int damage = 10;
+	private int health;
+	private int damage;
 	private int speed;
 	private int armor;
 
@@ -68,9 +69,13 @@ public class Rogue implements PlayerCharacter {
 	}
 
 	public void usePotionSmall(PlayerCharacter target, SmallHealthPotion SmallHealthPotion) {
-		target.setHealth(target.getHealth() + this.damage);
+		target.setHealth(target.getHealth() + SmallHealthPotion.getDamage());
 		System.out.println(this.getName() + " drinks potion restoring " + SmallHealthPotion.getDamage() + " "
-				+ target.getName() + " now has " + target.getHealth() + " health left!");
+				+ target.getName() + " now has " + this.getHealth() + " health left!");
+	}
+	public void equipSmallHealthRing(PlayerCharacter target, SmallHealthRing SmallHealthRing) {
+		target.setHealth(getHealth() + SmallHealthRing.getDamage());
+		System.out.println(target.getName()+ " equipped "+ SmallHealthRing.getName()+ " His Health is now " + this.getHealth());
 	}
 
 }

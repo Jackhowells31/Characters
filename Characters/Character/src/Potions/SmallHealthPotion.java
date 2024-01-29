@@ -1,6 +1,7 @@
 package Potions;
+
 public class SmallHealthPotion implements HealingPotions {
-	
+
 	private String name = "Small health potion";
 	private int damage = 4;
 
@@ -21,6 +22,11 @@ public class SmallHealthPotion implements HealingPotions {
 	}
 
 	public int getHealth() {
-		return damage;
+		return getHealth();
 	}
+
+	public int setHealth() {
+		return setHealth();
+	}
+
 }
