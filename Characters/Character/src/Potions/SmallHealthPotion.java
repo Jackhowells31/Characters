@@ -1,10 +1,19 @@
 package Potions;
 
-public class SmallHealthPotion implements HealingPotions {
+public class SmallHealthPotion implements HealingPotion {
 
 	private String name = "Small health potion";
-	private int damage = 4;
+	private int amount = 4;
 
+	public SmallHealthPotion(String name, int amount) {
+		this.name=name;
+		this.amount=amount;
+	}
+	
+	public SmallHealthPotion construct(String name, int amount) {
+		return new SmallHealthPotion(name, amount);
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -13,20 +22,12 @@ public class SmallHealthPotion implements HealingPotions {
 		this.name = name;
 	}
 
-	public int getDamage() {
-		return damage;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 
-	public void setDamage(int damage) {
-		this.damage = damage;
-	}
-
-	public int getHealth() {
-		return getHealth();
-	}
-
-	public int setHealth() {
-		return setHealth();
+	public int getAmount() {
+		return this.amount;
 	}
 
 }

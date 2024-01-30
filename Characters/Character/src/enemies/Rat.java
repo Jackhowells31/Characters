@@ -9,6 +9,9 @@ public class Rat implements EnemyCharacter{
 	private String name = "Ted";
 	
 	
+	public String setName() {
+		return this.name;
+	}
 	public String getName() {
 		return this.name;
 	}
@@ -40,6 +43,6 @@ public class Rat implements EnemyCharacter{
 		System.out.println("Rat deals "+(damage+2)+ " damage to "+target.getName() );
 		
 	}
-	
-	
 }
+	
+	

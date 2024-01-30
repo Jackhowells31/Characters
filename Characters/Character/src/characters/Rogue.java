@@ -69,13 +69,13 @@ public class Rogue implements PlayerCharacter {
 	}
 
 	public void usePotionSmall(PlayerCharacter target, SmallHealthPotion SmallHealthPotion) {
-		target.setHealth(target.getHealth() + SmallHealthPotion.getDamage());
-		System.out.println(this.getName() + " drinks potion restoring " + SmallHealthPotion.getDamage() + " "
+		target.setHealth(target.getHealth() + SmallHealthPotion.getAmount());
+		System.out.println(this.getName() + " drinks "+ SmallHealthPotion.getName() +" restoring " + SmallHealthPotion.getAmount() + " "
 				+ target.getName() + " now has " + this.getHealth() + " health left!");
 	}
 	public void equipSmallHealthRing(PlayerCharacter target, SmallHealthRing SmallHealthRing) {
 		target.setHealth(getHealth() + SmallHealthRing.getDamage());
-		System.out.println(target.getName()+ " equipped "+ SmallHealthRing.getName()+ " His Health is now " + this.getHealth());
+		System.out.println(target.getName()+ " equipped "+ SmallHealthRing.getName()+ " his health is now " + this.getHealth());
 	}
 
 }

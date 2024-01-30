@@ -8,6 +8,7 @@ public interface EnemyCharacter {
 	int getDamage();
 	String getName();
 	
+	
 	void setHealth(int health);
 	void attack1(PlayerCharacter target);
 	void attack2(PlayerCharacter target);

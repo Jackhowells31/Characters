@@ -6,10 +6,13 @@ public class Goul implements EnemyCharacter{
 	
 	private int health = 10;
 	private int damage =6;
-	private String name = "Frank";
+	private String name;
 	
 	
 	public String getName() {
+		return this.name;
+	}
+	public String setName() {
 		return this.name;
 	}
 	public int getHealth() {

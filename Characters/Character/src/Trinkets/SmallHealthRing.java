@@ -6,7 +6,7 @@ public class SmallHealthRing implements Jewlery {
 	private int damage = 2;
 	
 	public String getName() {
-		return null;
+		return name;
 	}
 	
 	public void setName(String name) {
