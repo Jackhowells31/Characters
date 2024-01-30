@@ -1,6 +1,7 @@
 package characters;
 
 import enemies.EnemyCharacter;
+import floors.Floor;
 import spells.Spell;
 
 public class Wizard implements MagicCharacter {
@@ -11,6 +12,8 @@ public class Wizard implements MagicCharacter {
 	private int damage;
 	private int speed;
 	private int spells;
+	private int[] position;
+	private Floor currentFloor;
 	
 	
 	
@@ -89,6 +92,22 @@ public class Wizard implements MagicCharacter {
 		target.setHealth(target.getHealth()-spell.getDamage());
 		System.out.println(this.getName() + " casts "+ spell.getName() +" for " + spell.getDamage()+ " damage on " + target.getName()+".");
 		
+	}
+	
+	public int[] getPosition() {
+		return this.position;
+	}
+	
+	public void setPosition(int[] position) {
+		this.position = position;
+	}
+	
+	public Floor getFloor() {
+		return this.currentFloor;
+	}
+	
+	public void setFloor(Floor currentFloor) {
+		this.currentFloor=currentFloor;
 	}
 
 }

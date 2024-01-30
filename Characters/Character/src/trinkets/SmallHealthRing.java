@@ -1,6 +1,6 @@
-package Trinkets;
+package trinkets;
 
-public class SmallHealthRing implements Jewlery {
+public class SmallHealthRing implements Jewelry {
 
 	private String name = "Small Health Ring";
 	private int damage = 2;

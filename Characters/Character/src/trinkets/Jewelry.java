@@ -1,6 +1,6 @@
-package Trinkets;
+package trinkets;
 
-public interface Jewlery {
+public interface Jewelry {
 
 	int getHealth();
 	int setHealth();

@@ -1,8 +1,9 @@
 package characters;
 
-import Potions.SmallHealthPotion;
-import Trinkets.SmallHealthRing;
 import enemies.EnemyCharacter;
+import floors.Floor;
+import potions.SmallHealthPotion;
+import trinkets.SmallHealthRing;
 import weapon.Dagger;
 
 public class Rogue implements PlayerCharacter {
@@ -12,6 +13,8 @@ public class Rogue implements PlayerCharacter {
 	private int damage;
 	private int speed;
 	private int armor;
+	private int[] position;
+	private Floor currentFloor;
 
 	public Rogue(String name) {
 
@@ -76,6 +79,22 @@ public class Rogue implements PlayerCharacter {
 	public void equipSmallHealthRing(PlayerCharacter target, SmallHealthRing SmallHealthRing) {
 		target.setHealth(getHealth() + SmallHealthRing.getDamage());
 		System.out.println(target.getName()+ " equipped "+ SmallHealthRing.getName()+ " his health is now " + this.getHealth());
+	}
+	
+	public int[] getPosition() {
+		return this.position;
+	}
+	
+	public void setPosition(int[] position) {
+		this.position = position;
+	}
+	
+	public Floor getFloor() {
+		return this.currentFloor;
+	}
+	
+	public void setFloor(Floor currentFloor) {
+		this.currentFloor=currentFloor;
 	}
 
 }

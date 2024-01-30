@@ -1,4 +1,4 @@
-package Trinkets;
+package trinkets;
 
 public class SmallDamageRing {
 

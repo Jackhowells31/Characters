@@ -1,4 +1,4 @@
-package Potions;
+package potions;
 
 public class SmallHealthPotion implements HealingPotion {
 

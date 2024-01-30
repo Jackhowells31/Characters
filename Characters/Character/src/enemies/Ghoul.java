@@ -2,7 +2,7 @@ package enemies;
 
 import characters.PlayerCharacter;
 
-public class Goul implements EnemyCharacter{
+public class Ghoul implements EnemyCharacter{
 	
 	private int health = 10;
 	private int damage =6;

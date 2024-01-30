@@ -1,6 +1,8 @@
 package characters;
 
 import enemies.EnemyCharacter;
+import floors.Basement;
+import floors.Floor;
 import weapon.Greatsword;
 
 public class Barbarian implements PlayerCharacter {
@@ -10,9 +12,11 @@ public class Barbarian implements PlayerCharacter {
 	private int damage = 7;
 	private int speed;
 	private int armor;
+	private int[] position = {0,0};
+	private Floor currentFloor;
 
 	public Barbarian(String name) {
-
+		this.currentFloor = new Basement();
 		this.name = name;
 		this.health = 14;
 		this.armor = 4;
@@ -69,6 +73,22 @@ public class Barbarian implements PlayerCharacter {
 		target.setHealth(target.getHealth() - this.damage);
 		System.out.println(
 				this.getName() + " attacks with Greatsword for " + this.getDamage() + " damage to " + target.getName());
+	}
+
+	public int[] getPosition() {
+		return this.position;
+	}
+	
+	public void setPosition(int[] position) {
+		this.position = position;
+	}
+	
+	public Floor getFloor() {
+		return this.currentFloor;
+	}
+	
+	public void setFloor(Floor currentFloor) {
+		this.currentFloor=currentFloor;
 	}
 
 }
