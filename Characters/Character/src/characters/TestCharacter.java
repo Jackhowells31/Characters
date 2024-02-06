@@ -8,7 +8,7 @@ import potions.MediumHealthPotion;
 import potions.SmallHealthPotion;
 
 public class TestCharacter {
-	
+
 	final static String ESC = "\033[";
 
 	public static void main(String[] args) {
@@ -30,7 +30,8 @@ public class TestCharacter {
 		boolean running = true;
 		while (running) {
 			String inputText = input.nextLine();
-			for (int i = 0; i < 50; ++i) System.out.println();
+			for (int i = 0; i < 50; ++i)
+				System.out.println();
 			switch (inputText) {
 			case "up": {
 				selectedCharacter.move(inputText);
@@ -48,19 +49,19 @@ public class TestCharacter {
 				selectedCharacter.move(inputText);
 				break;
 			}
-			case "stop":{
-				running = false;				
+			case "stop": {
+				running = false;
 			}
-			case "change":{
+			case "change": {
 				System.out.println("Change to which character? j for Jeff or g for Gorthok");
 				String charChoice = input.nextLine();
 				selectedCharacter = charChoice.equals("j") ? jeff : gorthok;
 				selectedCharacter.getFloor().printFloorPosition(selectedCharacter);
 			}
-				default: {
-					System.out.println("Please enter Left, Right, Up, Down, Change, or Stop. You entered: " + inputText);
-					selectedCharacter.getFloor().printFloorPosition(selectedCharacter);
-				}
+			default: {
+				System.out.println("Please enter Left, Right, Up, Down, Change, or Stop. You entered: " + inputText);
+				selectedCharacter.getFloor().printFloorPosition(selectedCharacter);
+			}
 			}
 		}
 		input.close();

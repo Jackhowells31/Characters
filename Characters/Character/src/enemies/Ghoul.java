@@ -5,7 +5,7 @@ import characters.PlayerCharacter;
 public class Ghoul implements EnemyCharacter{
 	
 	private int health = 10;
-	private int damage =6;
+	private int damage =3;
 	private String name;
 	
 	
